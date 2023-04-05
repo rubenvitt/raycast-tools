@@ -11,15 +11,33 @@
   "license": "MIT",
   "commands": [
     {
-      "name": "move-to-inbox",
-      "title": "Move to Inbox",
-      "subtitle": "Move the selected items in Finder to the inbox",
-      "description": "",
-      "mode": "no-view"
+      "name": "wheregoes",
+      "title": "Wheregoes",
+      "subtitle": "Lookup a tracking-link with wheregoes.com",
+      "description": "Insert an Uri full of trackers wich should be resolved to the original uri",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "url",
+          "placeholder": "URL with tracking",
+          "required": true,
+          "type": "text"
+        }
+      ]
+    }
+  ],
+  "preferences": [
+    {
+      "name": "apikey",
+      "title": "wheregoes.dev API key",
+      "type": "password",
+      "description": "Your API key for wheregoes.dev",
+      "required": true
     }
   ],
   "dependencies": {
-    "@raycast/api": "^1.49.0"
+    "@raycast/api": "^1.49.0",
+    "node-fetch": "^3.3.1"
   },
   "devDependencies": {
     "@raycast/eslint-config": "1.0.5",
